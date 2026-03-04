@@ -13,6 +13,7 @@ RUN dnf -y upgrade \
         golang \
         meld \
         jq \
+        sqlite3 \
         less \
         man-db \
         procps-ng \
