@@ -19,15 +19,19 @@
 		"ghcr.io/devcontainers/features/python:1":{
 			"version":"os-provided"
 		},
-		"ghcr.io/devcontainers-extra/features/uv:1":{},
-		"ghcr.io/devcontainers-extra/features/ripgrep:1":{}
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "1.21"
+		},
+		"ghcr.io/devcontainers-extra/features/uv:1": {},
+		"ghcr.io/devcontainers-extra/features/ripgrep:1":{},
 	},
 	"postCreateCommand":"npm install -g pnpm && pnpm add -g typescript npm-check-updates degit",
 	"workspaceMount":"source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
 	"workspaceFolder":"/workspace",
 	"mounts":[],
 	"containerEnv":{
-		"PNPM_HOME":"/home/vscode/.local/share/pnpm"
+		"PNPM_HOME":"/home/vscode/.local/share/pnpm",
+		"ROD_CHROME_BIN": "/usr/bin/chromium-browser",
 	},
 	"remoteEnv":{
 		"PATH":"${containerEnv:PNPM_HOME}:${containerEnv:PATH}"

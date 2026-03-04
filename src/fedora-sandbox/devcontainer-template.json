@@ -1,6 +1,6 @@
 {
   "id": "fedora-sandbox",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "name": "Fedora Sandbox",
   "description": "Sandboxed Fedora environment with node.js/python",
   "platforms": ["linux"]
