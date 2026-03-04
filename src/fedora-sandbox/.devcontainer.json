@@ -1,23 +1,6 @@
 {
 	"name":"Fedora Sandbox",
 	"image":"ghcr.io/kraxen72/fedora-toolchain-base:latest",
-	"features":{
-		"ghcr.io/devcontainers/features/common-utils:2":{
-			"installZsh":false,
-			"configureZshAsDefaultShell":false,
-			"installOhMyZsh":false,
-			"upgradePackages":true,
-			"username":"vscode",
-			"userUid":"automatic",
-			"userGid":"automatic"
-		},
-		"ghcr.io/devcontainers/features/node:1":{
-			"version":"lts",
-			"nodeGypDependencies":false
-		},
-		"ghcr.io/devcontainers-extra/features/uv:1": {},
-		"ghcr.io/devcontainers-extra/features/ripgrep:1":{}
-	},
 	"postCreateCommand":"npm install -g pnpm && pnpm add -g typescript npm-check-updates degit",
 	"workspaceMount":"source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
 	"workspaceFolder":"/workspace",
@@ -41,19 +24,7 @@
 	"customizations":{
 		"vscode":{
 			"settings":{
-				"chat.tools.autoApprove":true,
-				"chat.tools.terminal.autoApprove":{
-					"/.*/":true
-				},
-				"chat.tools.terminal.ignoreDefaultAutoApproveRules":true,
-				"chat.tools.urls.autoApprove":{
-					"https://*":true,
-					"http://*":true
-				}
-			},
-			"chat.tools.files.autoApprove":{
-				"/tmp/**":true,
-				"/workspace/**":true
+				"chat.tools.global.autoApprove": true
 			}
 		}
 	}
