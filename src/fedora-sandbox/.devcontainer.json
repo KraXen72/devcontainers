@@ -27,7 +27,9 @@
   "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm add -g typescript npm-check-updates degit",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
   "workspaceFolder": "/workspace",
-  "mounts": [],
+  "mounts": [
+    "source=${localEnv:HOME}/.config/starship.toml,target=/home/vscode/.config/starship.toml,type=bind,readonly,Z"
+  ],
   "otherPortsAttributes": {
     "onAutoForward": "silent"
   },
