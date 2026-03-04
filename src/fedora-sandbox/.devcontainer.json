@@ -36,5 +36,16 @@
     "--tmpfs=/tmp:exec,mode=1777"
   ],
   "remoteUser": "vscode",
-  "updateRemoteUserUID": true
+  "updateRemoteUserUID": true,
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "chat.tools.autoApprove": true,
+        "chat.tools.terminal.autoApprove": {
+          "/.*/": true
+        },
+        "chat.tools.terminal.ignoreDefaultAutoApproveRules": true
+      }
+    }
+  }
 }
