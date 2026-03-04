@@ -1,0 +1,41 @@
+{
+  "name": "Fedora Sandbox",
+  "image": "registry.fedoraproject.org/fedora:43",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "configureZshAsDefaultShell": false,
+      "installOhMyZsh": false,
+      "upgradePackages": true,
+      "username": "vscode",
+      "userUid": "automatic",
+      "userGid": "automatic"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts",
+      "nodeGypDependencies": false
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+	    "version": "os-provided"
+    },
+    "ghcr.io/devcontainers-extra/features/uv:1": {},
+    "ghcr.io/devcontainers-contrib/features/ripgrep:1": {},
+    "ghcr.io/devcontainers-contrib/features/jq:1": {},
+    "ghcr.io/devcontainer-community/devcontainer-features/starship.rs:1"
+  },
+  "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm add -g typescript npm-check-updates degit",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
+  "workspaceFolder": "/workspace",
+  "mounts": [],
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  },
+  "runArgs": [
+    "--cap-drop=ALL",
+    "--cap-add=CHOWN",
+    "--security-opt=no-new-privileges"
+  ],
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
+}
