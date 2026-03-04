@@ -30,7 +30,7 @@
 	"mounts":[],
 	"containerEnv":{
 		"PNPM_HOME":"/home/vscode/.local/share/pnpm",
-		"ROD_CHROME_BIN": "/usr/bin/chromium-browser",
+		"ROD_CHROME_BIN": "/usr/bin/chromium-browser"
 	},
 	"remoteEnv":{
 		"PATH":"${containerEnv:PNPM_HOME}:${containerEnv:PATH}"
@@ -40,7 +40,7 @@
 		"--cap-add=CHOWN",
 		"--security-opt=no-new-privileges",
 		"--tmpfs=/tmp:exec,mode=1777"
-	]
+	],
 	"remoteUser":"vscode",
 	"updateRemoteUserUID":true,
 	"customizations":{
