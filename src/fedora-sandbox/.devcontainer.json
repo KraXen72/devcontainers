@@ -25,6 +25,7 @@
     "ghcr.io/devcontainer-community/devcontainer-features/starship.rs:1": {}
   },
   "postCreateCommand": "echo 'eval \"$(starship init bash)\"' >> /home/vscode/.bashrc && npm install -g pnpm && pnpm add -g typescript npm-check-updates degit",
+  "initializeCommand": "podman buildx inspect devcontainer-builder > /dev/null 2>&1 || podman buildx create --name devcontainer-builder --use",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
   "workspaceFolder": "/workspace",
   "mounts": [],
