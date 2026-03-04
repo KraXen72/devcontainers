@@ -16,13 +16,13 @@
 			"version":"lts",
 			"nodeGypDependencies":false
 		},
-		"ghcr.io/devcontainers/features/python:1":{
-			"version":"os-provided"
-		},
 		"ghcr.io/devcontainers-extra/features/uv:1": {},
 		"ghcr.io/devcontainers-extra/features/ripgrep:1":{},
 		"ghcr.io/kraxen72/devcontainer-features/chromium-headless:1": {},
-		"ghcr.io/kraxen72/devcontainer-features/go-minimal:1": {}
+		"ghcr.io/kraxen72/devcontainer-features/go-minimal:1": {},
+		"ghcr.io/kraxen72/devcontainer-features/python-minimal:1": {
+			"version": "3.12"
+		},
 	},
 	"postCreateCommand":"npm install -g pnpm && pnpm add -g typescript npm-check-updates degit",
 	"workspaceMount":"source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
