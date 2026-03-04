@@ -50,7 +50,15 @@
         "chat.tools.terminal.autoApprove": {
           "/.*/": true
         },
-        "chat.tools.terminal.ignoreDefaultAutoApproveRules": true
+        "chat.tools.terminal.ignoreDefaultAutoApproveRules": true,
+        "chat.tools.urls.autoApprove": {
+          "https://*": true,
+          "http://*": true
+        }
+      },
+      "chat.tools.files.autoApprove": {
+        "/tmp/**": true,
+        "/workspace/**": true
       }
     }
   },
