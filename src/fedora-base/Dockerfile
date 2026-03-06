@@ -39,9 +39,7 @@ RUN dnf -y upgrade \
     && printf '%s\n' 'eval "$(mise activate bash)"' > /etc/profile.d/mise.sh \
     && chmod 0644 /etc/profile.d/mise.sh \
     && mkdir -p /go/bin \
-    && mkdir -p /home/vscode/.local/share/mise \
-    && chown -R 1000:0 /home/vscode/.local/share/mise || true \
-    && MISE_DATA_DIR=/home/vscode/.local/share/mise su - vscode -c 'mise use -g node@lts' \
+    && su - vscode -c 'mise use -g node@lts' \
     && dnf clean all
 
 ENV GOPATH=/go
