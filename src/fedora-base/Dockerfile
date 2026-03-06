@@ -29,6 +29,8 @@ RUN dnf -y upgrade \
         xz \
     && dnf -y copr enable jdxcode/mise \
     && dnf -y install mise \
+    && dnf -y copr enable dejan/lazygit \
+    && dnf -y install lazygit \
     && ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python3 \
     && ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python \
     && ln -sf /usr/bin/pip3 /usr/bin/pip \
