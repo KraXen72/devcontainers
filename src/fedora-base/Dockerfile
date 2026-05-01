@@ -16,7 +16,7 @@ RUN dnf -y upgrade \
         man-db \
         meld \
         nodejs \
-        openssh-server \
+        dropbear \
         procps-ng \
         python${PYTHON_VERSION} \
         python3-pip \
