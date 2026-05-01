@@ -29,7 +29,6 @@
 		"--ulimit=nproc=2048:2048",
 		"--ulimit=nofile=65536:65536"
 	],
-	"appPort": [2222],
 	"remoteUser":"vscode",
 	"updateRemoteUserUID":true,
 	"customizations":{
