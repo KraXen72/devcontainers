@@ -13,12 +13,6 @@
 	"mounts": [
 		"source=${localEnv:HOME}/.copilot,target=/home/vscode/.copilot,type=bind,Z"
 	],
-	"containerEnv":{
-		"PNPM_HOME":"/home/vscode/.local/share/pnpm"
-	},
-	"remoteEnv":{
-		"PATH":"${containerEnv:PNPM_HOME}/bin:${containerEnv:PNPM_HOME}:${containerEnv:PATH}"
-	},
 	"runArgs":[
 		"--publish=${localEnv:DCMAN_SSH_PORT}:2222",
 		"--cap-drop=ALL",
