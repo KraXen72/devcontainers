@@ -17,7 +17,7 @@
 		"PNPM_HOME":"/home/vscode/.local/share/pnpm"
 	},
 	"remoteEnv":{
-		"PATH":"${containerEnv:PNPM_HOME}:${containerEnv:PATH}"
+		"PATH":"${containerEnv:PNPM_HOME}/bin:${containerEnv:PNPM_HOME}:${containerEnv:PATH}"
 	},
 	"runArgs":[
 		"--publish=${localEnv:DCMAN_SSH_PORT}:2222",
